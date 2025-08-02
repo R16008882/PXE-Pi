@@ -1,0 +1,4 @@
+DEFAULT install
+LABEL install
+    KERNEL ubuntu/vmlinuz
+    APPEND initrd=ubuntu/initrd boot=casper url=http://192.168.1.2/ubuntu-22.04.5-live-server-amd64.iso ip=dhcp ---
