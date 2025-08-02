@@ -1,0 +1,82 @@
+# ========================================
+# Fichiers ISO et images système — TROP LOURDS
+# Ne jamais pousser ces fichiers (~2 Go+)
+# ========================================
+*.iso
+*.img
+*.tar
+*.tar.gz
+*.tar.xz
+*.zip
+*.dmg
+*.vmdk
+
+# ========================================
+# Dossiers du serveur PXE — Contiennent des données volumineuses ou temporaires
+# On partage les scripts et configs, pas les données
+# ========================================
+/srv/tftp/ubuntu/
+/srv/tftp/yocto/
+/srv/tftp/grubnetx64.efi.signed
+/srv/tftp/pxelinux.0
+/srv/tftp/ldlinux.c32
+/srv/tftp/initrd
+/srv/tftp/vmlinuz
+/srv/tftp/bzImage
+
+# ========================================
+# Fichiers temporaires, logs, caches
+# Évite les erreurs de "git add ."
+# ========================================
+*.log
+*.tmp
+*~
+nohup.out
+.DS_Store
+Thumbs.db
+.cache/
+logs/
+tmp/
+temp/
+
+# ========================================
+# Fichiers de configuration système (locales)
+# Ne pas pousser les configs spécifiques à une machine
+# ========================================
+/etc/dhcp/dhcpd.conf
+/etc/default/tftpd-hpa
+/etc/default/isc-dhcp-server
+
+# ========================================
+# Éditeurs de texte et IDE
+# ========================================
+# Vim / Neovim
+*.swp
+*.swo
+*.swn
+
+# Emacs
+\#*\#
+.\#*
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Nano
+.*.swp
+
+# ========================================
+# Scripts ou fichiers de test générés
+# À adapter selon ton projet
+# ========================================
+/test/
+/build/
+/dist/
+/out/
+
+# ========================================
+# Fichiers de verrouillage ou processus
+# ========================================
+*.pid
+*.sock
